@@ -1,0 +1,9 @@
+@use "../utilities/variables" as v;
+
+.btn-adidas {
+    background-color: v.$colorSecundario;
+    border: 2px v.$colorTerciario solid;
+    &:hover{
+        background-color: v.$colorTerciario;
+    }
+}

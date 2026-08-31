@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+@use "../components/botones";
+
+/*Logo de la pagina*/
+.navbar-brand{
+max-width: 200px;
+flex-shrink: 1; /*Permitir que el logo se encoja para que se siga viendo*/
+    img {
+        width: 100%;/*La imagen ocupa todo el ancho del contenedor*/
+        height: auto;
+        display: block;
+    }
+}
+.navbar-nav{
+    .nav-link{
+        color: v.$colorSecundario;
+        font-weight: 900;
+        font-size: clamp(1.2rem, 2vw, 3rem);
+        &:hover {
+            color: v.$colorTerciario;
+            }
+        &:active {
+            color: v.$colorTerciario; /*Pisa el valor por defecto de bootstrap*/
+            }
+    }
+}
