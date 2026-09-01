@@ -1,15 +1,16 @@
+@charset "UTF-8";
 /*Tipografia*/
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+/*Paleta de colores de la web*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/*Paleta de colores de la web*/
 body {
   font-family: "Oswald", sans-serif;
-  background-color: var(--colorSecundario);
+  background-color: #b1bdac;
 }
 
 .btn-adidas {
@@ -20,31 +21,14 @@ body {
   background-color: #ff7300;
 }
 
+.btn-comprar {
+  background-color: #ff7300;
+  color: #1b1550;
+  border-color: #ff7300;
+}
+
 header {
   background-color: #1b1550;
-}
-
-/*Logo de la pagina*/
-.navbar-brand {
-  max-width: 200px;
-  flex-shrink: 1; /*Permitir que el logo se encoja para que se siga viendo*/
-}
-.navbar-brand img {
-  width: 100%; /*La imagen ocupa todo el ancho del contenedor*/
-  height: auto;
-  display: block;
-}
-
-.navbar-nav .nav-link {
-  color: #b1bdac;
-  font-weight: 900;
-  font-size: clamp(1.2rem, 2vw, 3rem);
-}
-.navbar-nav .nav-link:hover {
-  color: #ff7300;
-}
-.navbar-nav .nav-link:active {
-  color: #ff7300; /*Pisa el valor por defecto de bootstrap*/
 }
 
 /*Footer de la web*/
@@ -76,6 +60,119 @@ footer .accordion .accordion-item .accordion-button {
 }
 .listaRedes a:hover {
   color: #b1bdac;
+}
+
+/*Logo de la pagina*/
+.navbar-brand {
+  max-width: 200px;
+  flex-shrink: 1; /*Permitir que el logo se encoja para que se siga viendo*/
+}
+.navbar-brand img {
+  width: 100%; /*La imagen ocupa todo el ancho del contenedor*/
+  height: auto;
+  display: block;
+}
+
+.navbar-nav .nav-link {
+  color: #b1bdac;
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 3rem);
+}
+.navbar-nav .nav-link:hover {
+  color: #ff7300;
+}
+.navbar-nav .nav-link:active {
+  color: #ff7300; /*Pisa el valor por defecto de bootstrap*/
+}
+
+/*Estilo del main de la pagina de index*/
+.guiaIndice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.index-main {
+  overflow: hidden;
+  width: 100%;
+}
+
+.index-row1 {
+  background-color: #b1bdac;
+  margin: 0;
+  width: 100%;
+}
+
+.textoInformativo {
+  background-color: #b1bdac;
+  color: #1b1550;
+  padding: 20px;
+}
+
+/*Carousel*/
+.carousel-item {
+  background-color: #b1bdac;
+}
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* ← Recorta la imagen para llenar el espacio sin deformarse */
+}
+
+/*ScrollSpy*/
+#list-example .list-group-item {
+  text-align: center;
+  background-color: #b1bdac;
+  border-color: #1b1550;
+  box-shadow: 3px 5px 5px rgb(0, 0, 0);
+}
+#list-example .list-group-item-action:hover {
+  background-color: #ff7300;
+  color: #1b1550;
+}
+
+/*Pagina que contiene el estilo que de momento es utilizado en las demas pages del sitio
+por lo que esta seccion va a afectar a las pages: futbol, hombre, kids y mujer*/
+.tituloImagen {
+  color: #1b1550;
+}
+
+.figureImagen {
+  margin: 0;
+  display: inline-block;
+  max-width: 100%;
+}
+.figureImagen img {
+  display: block;
+}
+
+.filaImagen {
+  width: 100%;
+  margin: 0;
+  background-color: #b1bdac;
+}
+
+.mosaicoProductos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .mosaicoProductos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .mosaicoProductos {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

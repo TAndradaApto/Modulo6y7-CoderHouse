@@ -1,0 +1,34 @@
+@use "../utilities/variables" as v;
+/*Pagina que contiene el estilo que de momento es utilizado en las demas pages del sitio
+por lo que esta seccion va a afectar a las pages: futbol, hombre, kids y mujer*/
+.tituloImagen{
+    color: v.$colorPrimario;
+}
+.figureImagen{
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+    img{
+        display: block;
+    }
+}
+.filaImagen{
+    width: 100%;
+    margin: 0;
+    background-color: v.$colorSecundario;
+}
+.mosaicoProductos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

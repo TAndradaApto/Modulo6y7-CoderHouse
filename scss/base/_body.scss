@@ -1,5 +1,5 @@
 @use "../utilities/variables" as v;
 body{
     font-family: v.$tipografia;
-    background-color: var(--colorSecundario);
+    background-color: v.$colorSecundario;
 }

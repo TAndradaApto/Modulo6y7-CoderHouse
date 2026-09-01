@@ -1,0 +1,11 @@
+@use "../utilities/variables" as v;
+
+.card {
+    background-color: v.$colorPrimario;
+    .card-body{
+        color: v.$colorSecundario;
+        h5{
+            color: v.$colorTerciario;
+        }
+    }
+}

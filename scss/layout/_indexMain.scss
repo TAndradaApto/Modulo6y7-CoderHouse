@@ -2,3 +2,54 @@
 @use "../components/botones";
 
 /*Estilo del main de la pagina de index*/
+.guiaIndice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.index-main {
+    overflow: hidden;
+    width: 100%;
+}
+
+.index-row1 {
+    background-color: v.$colorSecundario;
+    margin: 0;
+    width: 100%;
+}
+
+.textoInformativo {
+    background-color: v.$colorSecundario;
+    color: v.$colorPrimario;
+    padding: 20px;
+}
+
+/*Carousel*/
+.carousel-item {
+    background-color: v.$colorSecundario;
+    img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;/* ← Recorta la imagen para llenar el espacio sin deformarse */
+    }
+}
+/*ScrollSpy*/
+#list-example{
+    .list-group-item{
+        text-align: center;
+        background-color: v.$colorSecundario;
+        border-color: v.$colorPrimario;
+        box-shadow: 3px 5px 5px rgb(0, 0, 0);
+    }
+    .list-group-item-action{
+        &:hover{
+            background-color: v.$colorTerciario;
+            color: v.$colorPrimario;
+        }
+    }
+}
