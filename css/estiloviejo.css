@@ -1,0 +1,185 @@
+/*Tipografia a utilizar*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/*Reset general*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorPrimario: #1b1550;
+    --colorSecundario: #b1bdac;
+    --colorTerciario: #ff7300;
+}
+body{
+    font-family: "Oswald", sans-serif;
+    background-color: var(--colorSecundario);
+}
+/*===================NAVBAR==================*/
+
+/*LOGO
+/* Forzar que el navbar-brand se achique con la imagen */
+.navbar-brand {
+    max-width: 200px;   /* ← Mismo tamaño que la imagen */
+    flex-shrink: 1;    /* ← Permitir que el logo se encoja para que se siga viendo completo */
+}
+
+.navbar-brand img {
+    width: 100%;       /* ← La imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    display: block;
+}
+
+/*Colores del navbar*/
+header {
+    background-color: var(--colorPrimario);
+}
+
+.btn-adidas {
+    background-color: var(--colorSecundario);
+    border: 2px var(--colorTerciario) solid;
+}
+.btn-adidas:hover {
+    background-color: var(--colorTerciario);
+}
+.nav-link {
+    color: var(--colorSecundario);
+    font-weight: 900;
+    font-size: clamp(1.2rem, 2vw, 3rem);
+}
+.nav-link:hover{
+    color: var(--colorTerciario); 
+}
+header .navbar .nav-link.active {
+    color: var(--colorTerciario) !important; /*Piso el valor por defecto de bootsrap*/
+}
+
+/*==============MAIN INDEX================*/
+.guiaIndice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+.index-main {
+    overflow: hidden;
+    width: 100%;
+}
+.index-row1 {
+    background-color: var(--colorSecundario);
+    margin: 0;
+    width: 100%;
+}
+.textoInformativo {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrimario);
+    padding: 20px;
+}
+/*Carousel*/
+.carousel-item img {
+    width: 100%;           /* ← Ocupa todo el ancho */
+    height: 400px;         /* ← Altura fija para todas las imágenes */
+    object-fit: cover;     /* ← Recorta la imagen para llenar el espacio sin deformarse */
+}
+.carousel-item {
+    background-color: var(--colorSecundario);
+}
+/*ScrollSpy*/
+
+.list-group a {
+    text-align: center;
+    background-color: var(--colorSecundario);
+    border-color: var(--colorPrimario);
+    box-shadow: 3px 5px 5px rgb(0, 0, 0);
+}
+
+#list-example .list-group-item-action:hover {
+    background-color: var(--colorTerciario);
+    color: var(--colorPrimario);
+}
+/*MAIN de la pagina futbol*/
+.tituloImagen{
+    color: var(--colorPrimario);
+}
+.figureImagen{
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+}
+.figureImagen img {
+    display: block;
+}
+.filaImagen {
+    width: 100%;
+    margin: 0;
+    background-color: var(--colorSecundario);
+}
+.mosaicoProductos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card{
+    background-color: var(--colorPrimario);
+}
+.card .card-body{
+    color: var(--colorSecundario);
+}
+.card-body h5{
+    color: var(--colorTerciario);
+}
+.btn-comprar{
+    background-color: var(--colorTerciario);
+    color: var(--colorPrimario);
+    border-color: var(--colorTerciario);
+}
+@media (min-width: 768px) {
+    .mosaicoProductos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .mosaicoProductos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/*===========================FOOTER================================*/
+footer .accordion .accordion-item {
+    background-color: var(--colorTerciario);
+    color: var(--colorPrimario);
+}
+footer .accordion-button {
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario);
+}
+.listaRedes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /*Para que en mobile se realice el salto de linea*/
+    list-style: none;
+    margin-top: 10px;
+}
+.listaRedes a{
+    color: var(--colorTerciario);
+    background-color: var(--colorPrimario);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid var(--colorSecundario);
+    border-radius: 10%;
+}
+.listaRedes a:hover {
+    color: var(--colorSecundario);
+}

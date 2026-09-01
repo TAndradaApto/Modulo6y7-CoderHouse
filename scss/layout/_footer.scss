@@ -1,0 +1,36 @@
+@use "../utilities/variables" as v;
+@use "../components/botones";
+@use "../utilities/mixins" as m;
+
+/*Footer de la web*/
+footer{
+    .accordion{
+        .accordion-item{
+            background-color: v.$colorTerciario;
+            color: v.$colorPrimario;
+            .accordion-button {
+                background-color: v.$colorPrimario;
+                color: v.$colorSecundario;
+            }
+        }
+    }
+}
+
+.listaRedes {
+    @include m.flex-center($justify: space-between); // ← Cambiás solo el justify
+    gap: 2rem;
+    flex-wrap: wrap;/*Para que en mobile se realice el salto de linea*/
+    list-style: none;
+    margin-top: 10px;
+    a{
+        color: v.$colorTerciario;
+        background-color: v.$colorPrimario;
+        text-decoration: none;
+        padding: 10px;
+        border: 2px solid v.$colorSecundario;
+        border-radius: 10%;
+        &:hover{
+            color: v.$colorSecundario
+        }
+    }
+}
