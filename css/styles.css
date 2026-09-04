@@ -27,64 +27,57 @@ body {
   border-color: #ff7300;
 }
 
+/*Estas son las cards que utilizo en las paginas con productos*/
+.card {
+  background-color: #1b1550;
+}
+.card:hover {
+  transform: scale(0.96);
+}
+.card .card-body {
+  color: #b1bdac;
+}
+.card .card-body h5 {
+  color: #ff7300;
+}
+
 header {
   background-color: #1b1550;
-}
-
-/*Footer de la web*/
-footer .accordion .accordion-item {
-  background-color: #ff7300;
-  color: #1b1550;
-}
-footer .accordion .accordion-item .accordion-button {
-  background-color: #1b1550;
-  color: #b1bdac;
-}
-
-.listaRedes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 2rem;
-  flex-wrap: wrap; /*Para que en mobile se realice el salto de linea*/
-  list-style: none;
-  margin-top: 10px;
-}
-.listaRedes a {
-  color: #ff7300;
-  background-color: #1b1550;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #b1bdac;
-  border-radius: 10%;
-}
-.listaRedes a:hover {
-  color: #b1bdac;
 }
 
 /*Logo de la pagina*/
 .navbar-brand {
   max-width: 200px;
   flex-shrink: 1; /*Permitir que el logo se encoja para que se siga viendo*/
+  transition: 0.5s ease-out;
 }
 .navbar-brand img {
   width: 100%; /*La imagen ocupa todo el ancho del contenedor*/
   height: auto;
   display: block;
 }
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
 
 .navbar-nav .nav-link {
   color: #b1bdac;
   font-weight: 900;
   font-size: clamp(1.2rem, 2vw, 3rem);
+  transition: 1s ease-out;
 }
 .navbar-nav .nav-link:hover {
   color: #ff7300;
+  transform: translateX(15px);
 }
 .navbar-nav .nav-link:active {
-  color: #ff7300; /*Pisa el valor por defecto de bootstrap*/
+  color: #ff7300 !important; /*Pisa el valor por defecto de bootstrap*/
+}
+@media (min-width: 1024px) {
+  .navbar-nav .nav-link:hover {
+    transform: translateY(10px);
+    margin: 0px 10px;
+  }
 }
 
 /*Estilo del main de la pagina de index*/
@@ -115,6 +108,16 @@ footer .accordion .accordion-item .accordion-button {
   background-color: #b1bdac;
   color: #1b1550;
   padding: 20px;
+}
+.textoInformativo .tituloIndex {
+  font-size: 4rem;
+  transition: 1s ease-in;
+}
+.textoInformativo .tituloIndex:hover {
+  transform: scale(1.5);
+  text-decoration: underline;
+  margin: 30px auto;
+  text-shadow: 4px 4px 10px rgb(0, 0, 0);
 }
 
 /*Carousel*/
@@ -167,6 +170,8 @@ por lo que esta seccion va a afectar a las pages: futbol, hombre, kids y mujer*/
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  /*Agrego el transition aca, para el efecto que tendran las cards*/
+  transition: 2.5s ease-out;
 }
 @media (min-width: 768px) {
   .mosaicoProductos {
@@ -177,6 +182,39 @@ por lo que esta seccion va a afectar a las pages: futbol, hombre, kids y mujer*/
   .mosaicoProductos {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/*Footer de la web*/
+footer .accordion .accordion-item {
+  background-color: #ff7300;
+  color: #1b1550;
+}
+footer .accordion .accordion-item .accordion-button {
+  background-color: #1b1550;
+  color: #b1bdac;
+}
+
+.listaRedes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  flex-wrap: wrap; /*Para que en mobile se realice el salto de linea*/
+  list-style: none;
+  margin-top: 10px;
+}
+.listaRedes a {
+  color: #ff7300;
+  background-color: #1b1550;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #b1bdac;
+  border-radius: 10%;
+}
+.listaRedes a:hover {
+  color: #b1bdac;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,11 @@
 @use "../utilities/variables" as v;
 
+/*Estas son las cards que utilizo en las paginas con productos*/
 .card {
     background-color: v.$colorPrimario;
+    &:hover{
+        transform: scale(0.96);
+    }
     .card-body{
         color: v.$colorSecundario;
         h5{

@@ -25,6 +25,8 @@ por lo que esta seccion va a afectar a las pages: futbol, hombre, kids y mujer*/
     margin-top: 2rem;
     margin-bottom: 2rem;
 
+    /*Agrego el transition aca, para el efecto que tendran las cards*/
+    transition: 2.5s ease-out;
     @media (min-width: 768px){
         grid-template-columns: repeat(3, 1fr);
     }
